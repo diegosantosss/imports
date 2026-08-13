@@ -1,0 +1,41 @@
+DS IMPORTS — SITE
+=================
+
+COMO ABRIR
+----------
+Abra o arquivo "index.html" no navegador (duplo clique).
+No VS Code, dá pra usar a extensão "Live Server" pra ver atualizando em tempo real.
+
+ESTRUTURA
+---------
+index.html        -> a página (textos e estrutura)
+css/style.css     -> todo o visual (cores, fontes, layout)
+js/main.js        -> o menu que abre no celular
+img/              -> todas as imagens
+
+O QUE TROCAR
+------------
+1) FOTOS DOS PRODUTOS
+   Substitua os arquivos img/produto-1.jpg ... produto-8.jpg pelas suas fotos
+   (pode manter o mesmo nome pra não precisar mexer no código).
+   Depois, no index.html, edite o nome de cada produto no <h3> e no link do WhatsApp.
+
+2) SUA FOTO (seção história)
+   Troque o arquivo img/fundador.jpg pela sua foto.
+
+3) TEXTO DA HISTÓRIA
+   No index.html, procure por "BLOCO DE HISTÓRIA" e edite o texto.
+
+4) INSTAGRAM
+   No rodapé do index.html, procure por "@dsimports" e coloque o @ certo + o link.
+
+CORES
+-----
+Tudo controlado no topo do css/style.css (bloco :root).
+--bg = fundo preto | --silver = prata dos destaques.
+
+WHATSAPP
+--------
+Número já configurado: (83) 98819-5457
+Todos os botões levam pra esse WhatsApp com mensagem pronta.
+Se mudar o número, troque "5583988195457" em todos os lugares do index.html.
