@@ -12,7 +12,8 @@
   --silver-2:#cfd2d8;
   --silver-3:#8a8f98;
   --steel:#5b6068;
-  --orange:#c2610a;
+  --accent:#2f6fe0;
+  --accent-2:#7ec8ff;
   --wa:#25D366;
   --radius:18px;
   --maxw:1120px;
@@ -69,13 +70,13 @@ a{color:inherit;text-decoration:none}
 /* ===== HEADER ===== */
 header{
   position:sticky;top:0;z-index:50;
-  background:rgba(7,7,8,.72);backdrop-filter:blur(16px);
+  background:rgba(8,14,26,.72);backdrop-filter:blur(16px);
   border-bottom:1px solid var(--line);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand-name{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;letter-spacing:-.01em;color:var(--txt)}
-.brand-name b{color:var(--orange);font-weight:800}
+.brand-name b{color:var(--accent);font-weight:800}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:14px;color:var(--txt-2);font-weight:500;transition:.2s}
 .nav-links a:hover{color:var(--txt)}
@@ -88,20 +89,21 @@ header{
 .hero::before{
   content:"";position:absolute;inset:0;z-index:-1;
   background:
-    radial-gradient(700px 420px at 50% -8%,rgba(180,186,196,.14),transparent 60%),
-    radial-gradient(900px 500px at 50% 120%,rgba(90,96,104,.10),transparent 60%);
+    radial-gradient(900px 560px at 50% -10%,rgba(47,111,224,.30),transparent 62%),
+    radial-gradient(700px 420px at 50% -8%,rgba(126,200,255,.12),transparent 60%),
+    linear-gradient(180deg,#0a1730 0%,#050a14 38%,var(--bg) 100%);
 }
 .hero .tag{
   display:inline-flex;align-items:center;gap:8px;margin-bottom:26px;
   padding:8px 16px;border:1px solid var(--line);border-radius:999px;
   font-size:13px;color:var(--txt-2);background:rgba(255,255,255,.03);
 }
-.hero .tag .dot{width:7px;height:7px;border-radius:50%;background:var(--silver-2);box-shadow:0 0 10px var(--silver-2)}
+.hero .tag .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 10px var(--accent-2)}
 .hero h1{font-size:clamp(38px,7vw,68px);font-weight:800;margin:0 auto;max-width:14ch}
 .hero p.sub{max-width:56ch;margin:24px auto 38px;color:var(--txt-2);font-size:clamp(15px,2.2vw,18px)}
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .hero-logo{width:min(190px,48vw);margin:0 auto 36px;display:block}
-.hero-logo img{width:100%;aspect-ratio:1/1;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.14);box-shadow:0 0 0 6px rgba(255,255,255,.03),0 20px 50px -12px rgba(200,205,215,.28)}
+.hero-logo img{width:100%;aspect-ratio:1/1;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.14);box-shadow:0 0 0 6px rgba(255,255,255,.03),0 20px 50px -12px rgba(200,205,215,.28),0 0 60px -10px rgba(47,111,224,.35)}
 
 /* ===== STRIP ===== */
 .strip{border-block:1px solid var(--line);background:var(--bg-2)}
@@ -123,10 +125,10 @@ header{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:26px 24px;transition:.3s;
 }
-.feat:hover{background:var(--card-hi);border-color:rgba(255,255,255,.2);transform:translateY(-4px)}
+.feat:hover{background:var(--card-hi);border-color:rgba(126,200,255,.3);transform:translateY(-4px);box-shadow:0 16px 40px -20px rgba(47,111,224,.4)}
 .feat .ic{
   width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:18px;
-  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03));
+  background:linear-gradient(180deg,rgba(126,200,255,.16),rgba(255,255,255,.03));
   border:1px solid var(--line);
 }
 .feat .ic svg{width:22px;height:22px;stroke:var(--silver-1)}
@@ -148,7 +150,7 @@ header{
 .prod .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}
 .prod:hover .ph img{transform:scale(1.05)}
 .prod .info{padding:16px 16px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
-.prod .info .prod-name{font-size:16px;font-weight:700;color:var(--orange);font-family:'Sora',sans-serif;letter-spacing:-.01em}
+.prod .info .prod-name{font-size:16px;font-weight:700;color:var(--accent-2);font-family:'Sora',sans-serif;letter-spacing:-.01em}
 .prod .info .prod-desc{font-size:13px;color:var(--txt-2);line-height:1.5;margin-bottom:4px}
 .prod .info a{
   margin-top:auto;font-size:13.5px;font-weight:600;font-family:'Sora';
@@ -165,7 +167,7 @@ header{
   padding:56px 48px;text-align:center;max-width:840px;margin:0 auto;
   position:relative;overflow:hidden;
 }
-.trade::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 260px at 50% 0%,rgba(180,186,196,.10),transparent 60%);z-index:0}
+.trade::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 260px at 50% 0%,rgba(126,200,255,.14),transparent 60%);z-index:0}
 .trade>*{position:relative;z-index:1}
 .trade h2{font-size:clamp(26px,4.4vw,40px);font-weight:700;margin:12px 0 16px}
 .trade p{color:var(--txt-2);max-width:52ch;margin:0 auto 30px}
@@ -192,14 +194,14 @@ header{
 
 /* ===== CTA FINAL ===== */
 .cta-final{text-align:center;padding:96px 0}
-.cta-final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 340px at 50% 50%,rgba(160,166,176,.10),transparent 62%)}
+.cta-final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 340px at 50% 50%,rgba(47,111,224,.14),transparent 62%)}
 .cta-final h2{font-size:clamp(30px,5vw,50px);font-weight:800;margin-bottom:16px}
 .cta-final p{color:var(--txt-2);margin-bottom:32px;font-size:17px}
 
 /* ===== FOOTER ===== */
 footer{background:#050506;border-top:1px solid var(--line);padding:64px 0 40px}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:44px}
-.foot-brand img{height:64px;width:64px;border-radius:50%;object-fit:cover;margin-bottom:16px;border:1px solid rgba(255,255,255,.16);box-shadow:0 2px 14px rgba(255,255,255,.08)}
+.foot-brand img{height:64px;width:64px;border-radius:50%;object-fit:cover;margin-bottom:16px;border:1px solid rgba(255,255,255,.16);box-shadow:0 2px 14px rgba(47,111,224,.25)}
 .foot-brand p{color:var(--txt-3);font-size:14px;max-width:34ch}
 .foot-col h4{font-family:'Sora';font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-3);margin-bottom:16px}
 .foot-col a,.foot-col p{display:block;color:var(--txt-2);font-size:14.5px;margin-bottom:10px;transition:.2s}
