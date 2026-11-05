@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+  <title>Painel do catálogo | DS Imports</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <a href="index.html">← Voltar à loja</a>
+      <h1>Painel do catálogo</h1>
+      <p>DS Imports</p>
+    </header>
+
+    <form id="login">
+      <label for="token">Token de acesso do GitHub</label>
+      <input id="token" type="password" autocomplete="off" required>
+      <p>Gere um <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">token granular</a> para o repositório <strong>imports</strong>, com <strong>Contents → Read and write</strong>. Use o token aqui a cada sessão.</p>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <form id="editor" hidden>
+      <fieldset id="fields">
+        <legend>Editar catálogo</legend>
+        <label for="product">Produto</label>
+        <select id="product"></select>
+        <label for="name">Nome</label>
+        <input id="name" maxlength="120" required>
+        <label for="description">Descrição</label>
+        <textarea id="description" rows="4" maxlength="1000" required></textarea>
+        <label for="price">Preço em reais</label>
+        <input id="price" type="number" min="0" max="999999.99" step="0.01" inputmode="decimal" placeholder="Em branco para ocultar">
+        <label for="photo">Trocar foto</label>
+        <input id="photo" type="file" accept="image/jpeg,image/png,image/webp">
+        <img id="preview" alt="Prévia da foto do produto" width="220" hidden>
+        <div class="actions">
+          <button type="submit">Publicar produto</button>
+          <button id="add" type="button" class="secondary">Novo produto</button>
+          <button id="exit" type="button" class="secondary">Sair</button>
+        </div>
+      </fieldset>
+    </form>
+  </main>
+</body>
+</html>

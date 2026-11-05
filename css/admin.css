@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  background: #111215;
+  color: #f4f4f5;
+  font: 1rem/1.5 system-ui, sans-serif;
+}
+main { max-width: 42rem; margin: 2rem auto; padding: 0 1rem; }
+header { margin-bottom: 1.5rem; }
+h1 { margin: .75rem 0 0; }
+p { margin: .5rem 0 1rem; }
+a { color: #c3d5ff; }
+form {
+  padding: 1.25rem;
+  background: #202126;
+  border: 1px solid #42444d;
+  border-radius: .75rem;
+}
+fieldset { margin: 0; border: 0; padding: 0; min-width: 0; }
+legend, label { font-weight: 650; }
+label { display: block; margin-top: .8rem; }
+input, textarea, select, button {
+  font: inherit;
+  border: 1px solid #626571;
+  border-radius: .4rem;
+  padding: .55rem .65rem;
+}
+input, textarea, select {
+  display: block;
+  width: 100%;
+  background: #15161a;
+  color: inherit;
+}
+textarea { resize: vertical; }
+button { background: #e4e9f8; color: #16181d; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+.secondary { background: transparent; color: inherit; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+#preview { display: block; max-width: 100%; max-height: 220px; object-fit: contain; margin-top: 1rem; }
+#status { overflow-wrap: anywhere; }

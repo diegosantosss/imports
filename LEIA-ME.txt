@@ -15,10 +15,15 @@ img/              -> todas as imagens
 
 O QUE TROCAR
 ------------
-1) FOTOS DOS PRODUTOS
-   Substitua os arquivos img/produto-1.jpg ... produto-8.jpg pelas suas fotos
-   (pode manter o mesmo nome pra não precisar mexer no código).
-   Depois, no index.html, edite o nome de cada produto no <h3> e no link do WhatsApp.
+1) CATÁLOGO
+   No rodapé do site, abra a Área administrativa (admin.html).
+   No GitHub, gere um token granular para apenas o repositório imports, com
+   Contents → Read and write. Cole o token no painel para entrar. Ele fica
+   na memória da página até você sair ou fechar a aba.
+   Escolha um produto ou clique em Novo produto. Edite nome, descrição, preço
+   e foto e clique em Publicar produto. Preço em branco oculta o valor.
+   O painel salva a alteração na branch main. O catálogo público é atualizado
+   quando a hospedagem publicar essa versão.
 
 2) SUA FOTO (seção história)
    Troque o arquivo img/fundador.jpg pela sua foto.

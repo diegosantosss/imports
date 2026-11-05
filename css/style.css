@@ -313,3 +313,5 @@ footer { background: #050506; border-top: 1px solid var(--line); padding: 64px 0
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
 }
+.prod-price { display: block; margin: .5rem 0; font-weight: 700; }
+.foot-bottom a { color: inherit; }
