@@ -39,3 +39,27 @@ button:disabled { opacity: .6; cursor: wait; }
 .actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
 #preview { display: block; max-width: 100%; max-height: 220px; object-fit: contain; margin-top: 1rem; }
 #status { overflow-wrap: anywhere; }
+
+.notice, .publication { overflow-wrap: anywhere; }
+.notice:empty { margin: 0; }
+.notice[data-tone="error"] { color: #ffb4ae; }
+.publication {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  width: min(27rem, calc(100% - 2rem));
+  padding: .85rem 1rem;
+  border: 1px solid #717e9b;
+  border-radius: .6rem;
+  background: #242d43;
+  color: #eff4ff;
+  box-shadow: 0 .35rem 1.2rem #0008;
+}
+.publication p { margin: 0; }
+.publication button { margin-top: .55rem; }
+.publication[data-tone="success"] {
+  border-color: #64bd8c;
+  background: #143827;
+  color: #cff8dd;
+}

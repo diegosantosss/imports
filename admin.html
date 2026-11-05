@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
   <title>Painel do catálogo | DS Imports</title>
   <link rel="stylesheet" href="css/admin.css">
   <script src="js/admin.js" defer></script>
@@ -41,12 +41,17 @@
         <input id="photo" type="file" accept="image/jpeg,image/png,image/webp">
         <img id="preview" alt="Prévia da foto do produto" width="220" hidden>
         <div class="actions">
-          <button type="submit">Publicar produto</button>
+          <button id="publish" type="submit">Publicar alteração</button>
           <button id="add" type="button" class="secondary">Novo produto</button>
           <button id="exit" type="button" class="secondary">Sair</button>
         </div>
       </fieldset>
+      <p id="editor-status" class="notice" role="status" aria-live="polite"></p>
     </form>
+    <aside id="publication" class="publication" hidden>
+      <p id="publication-status" role="status" aria-live="polite"></p>
+      <button id="check-publication" type="button" class="secondary" hidden>Verificar publicação</button>
+    </aside>
   </main>
 </body>
 </html>
